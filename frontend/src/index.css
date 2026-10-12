@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;600&family=Noto+Sans+Bengali:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gujarati:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600&family=Noto+Sans+Malayalam:wght@400;500;600&family=Noto+Sans+Oriya:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgb(var(--color-highlight) / var(--color-highlight-alpha, 0.25));
+  color: rgb(var(--color-foreground));
+}
+
+/* Indic text styling enhancements */
+:lang(ta), .lang-ta {
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.75;
+}
+:lang(hi), .lang-hi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.75;
+}
+:lang(te), .lang-te {
+  font-family: 'Noto Sans Telugu', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.75;
+}
+:lang(ml), .lang-ml {
+  font-family: 'Noto Sans Malayalam', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.75;
+}
+:lang(kn), .lang-kn {
+  font-family: 'Noto Sans Kannada', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.75;
+}
+:lang(ur), .lang-ur {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2.0;
+  direction: rtl;
+}
+
+/* Tabular figures for fee and grade tables */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle neutral scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border-strong));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-foreground-muted));
+}
+
+/* Markdown Muted 5-Color Code Syntax Highlighting */
+pre code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: rgb(var(--color-background-subtle));
+  color: rgb(var(--color-foreground));
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: rgb(var(--color-foreground-muted));
+  font-style: italic;
+}
+.token.punctuation {
+  color: rgb(var(--color-foreground-secondary));
+}
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol {
+  color: rgb(var(--color-accent-strong));
+}
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin {
+  color: rgb(var(--color-success));
+}
+.token.operator, .token.entity, .token.url, .token.variable {
+  color: rgb(var(--color-primary));
+}
+.token.atrule, .token.attr-value, .token.keyword {
+  color: rgb(var(--color-info));
+}
+.token.function, .token.class-name {
+  color: rgb(var(--color-accent));
+}
+.token.regex, .token.important {
+  color: rgb(var(--color-danger));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

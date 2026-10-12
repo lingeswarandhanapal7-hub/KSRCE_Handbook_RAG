@@ -1,0 +1,17 @@
+{
+  "short_name": "KSRCE AI",
+  "name": "KSRCE Handbook Assistant",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512 192x192 any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FAF8F4",
+  "theme_color": "#1C2B4A",
+  "display": "standalone",
+  "orientation": "portrait"
+}

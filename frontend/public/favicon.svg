@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Navy Tile -->
+  <rect width="64" height="64" rx="16" fill="#1C2B4A"/>
+  <!-- Ivory Academic Cap / Book Glyph -->
+  <path d="M32 18L16 26L32 34L48 26L32 18Z" fill="#FAF8F4"/>
+  <path d="M22 30.5V40C22 43.5 26.5 46 32 46C37.5 46 42 43.5 42 40V30.5L32 35.5L22 30.5Z" fill="#FAF8F4" fill-opacity="0.9"/>
+  <!-- Small Brass Dot -->
+  <circle cx="48" cy="22" r="3.5" fill="#B38B3A"/>
+</svg>

@@ -1,0 +1,153 @@
+/* Ink & Brass Design Tokens — Single Source of Truth */
+
+:root,
+[data-theme="light"],
+.light {
+  /* Surface & Layout Neutrals (60%) */
+  --color-background: 250 248 244;           /* #FAF8F4 */
+  --color-background-subtle: 243 240 234;    /* #F3F0EA */
+  --color-surface: 255 255 255;              /* #FFFFFF */
+  --color-surface-raised: 255 255 255;       /* #FFFFFF */
+
+  /* Hairline Borders */
+  --color-border: 230 225 216;               /* #E6E1D8 */
+  --color-border-strong: 211 204 191;        /* #D3CCBF */
+
+  /* Typography */
+  --color-foreground: 23 32 47;              /* #17202F */
+  --color-foreground-secondary: 69 80 99;    /* #455063 */
+  --color-foreground-muted: 92 101 120;      /* #5C6578 */
+
+  /* Ink Navy Primary (30%) */
+  --color-primary: 28 43 74;                 /* #1C2B4A */
+  --color-primary-hover: 38 56 94;           /* #26385E */
+  --color-primary-foreground: 250 248 244;   /* #FAF8F4 */
+
+  /* Brass Accent (<=10%) */
+  --color-accent: 179 139 58;                /* #B38B3A */
+  --color-accent-strong: 122 92 30;          /* #7A5C1E */
+  --color-accent-soft: 244 234 211;          /* #F4EAD3 */
+  --color-accent-border: 227 206 158;        /* #E3CE9E */
+
+  /* Message Bubbles */
+  --color-user-bubble: 28 43 74;             /* #1C2B4A */
+  --color-user-bubble-foreground: 250 248 244;/* #FAF8F4 */
+
+  /* Focus, Highlight, Overlay */
+  --color-ring: 150 112 47;                  /* #96702F */
+  --color-highlight: 179 139 58;             /* rgb base for rgba(179,139,58,.25) */
+  --color-highlight-alpha: 0.25;
+  --color-overlay: 15 22 38;                 /* rgb base for rgba(15,22,38,.45) */
+  --color-overlay-alpha: 0.45;
+
+  /* Semantic Messaging */
+  --color-success: 47 122 87;                /* #2F7A57 */
+  --color-warning: 168 102 26;               /* #A8661A */
+  --color-danger: 178 59 52;                 /* #B23B34 */
+  --color-info: 47 95 158;                   /* #2F5F9E */
+
+  /* Shadows (Neutral, never colored) */
+  --shadow-soft: 0 1px 2px rgba(20, 28, 45, 0.06), 0 8px 24px -12px rgba(20, 28, 45, 0.14);
+}
+
+.dark,
+[data-theme="dark"] {
+  /* Surface & Layout Neutrals (60%) */
+  --color-background: 15 19 26;              /* #0F131A */
+  --color-background-subtle: 11 14 20;       /* #0B0E14 */
+  --color-surface: 21 26 35;                 /* #151A23 */
+  --color-surface-raised: 27 33 44;          /* #1B212C */
+
+  /* Hairline Borders */
+  --color-border: 35 42 55;                  /* #232A37 */
+  --color-border-strong: 48 57 73;           /* #303949 */
+
+  /* Typography */
+  --color-foreground: 233 236 242;           /* #E9ECF2 */
+  --color-foreground-secondary: 179 186 200; /* #B3BAC8 */
+  --color-foreground-muted: 139 147 165;     /* #8B93A5 */
+
+  /* Ivory / Light Primary in Dark Mode */
+  --color-primary: 241 237 228;              /* #F1EDE4 */
+  --color-primary-hover: 228 222 207;        /* #E4DECF */
+  --color-primary-foreground: 15 19 26;      /* #0F131A */
+
+  /* Muted Brass Accent */
+  --color-accent: 209 169 85;                /* #D1A955 */
+  --color-accent-strong: 227 197 125;        /* #E3C57D */
+  --color-accent-soft: 209 169 85;           /* rgb base for rgba(209,169,85,.12) */
+  --color-accent-soft-alpha: 0.12;
+  --color-accent-border: 209 169 85;         /* rgb base for rgba(209,169,85,.30) */
+  --color-accent-border-alpha: 0.30;
+
+  /* Message Bubbles */
+  --color-user-bubble: 31 43 69;             /* #1F2B45 */
+  --color-user-bubble-foreground: 233 236 242;/* #E9ECF2 */
+
+  /* Focus, Highlight, Overlay */
+  --color-ring: 209 169 85;                  /* #D1A955 */
+  --color-highlight: 209 169 85;             /* rgb base for rgba(209,169,85,.28) */
+  --color-highlight-alpha: 0.28;
+  --color-overlay: 5 8 14;                   /* rgb base for rgba(5,8,14,.60) */
+  --color-overlay-alpha: 0.60;
+
+  /* Semantic Messaging */
+  --color-success: 91 179 138;               /* #5BB38A */
+  --color-warning: 224 160 74;               /* #E0A04A */
+  --color-danger: 232 120 108;               /* #E8786C */
+  --color-info: 122 165 230;                 /* #7AA5E6 */
+
+  /* Shadows (Neutral, never colored) */
+  --shadow-soft: 0 8px 24px -12px rgba(0, 0, 0, 0.60);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(.light) {
+    /* Surface & Layout Neutrals (60%) */
+    --color-background: 15 19 26;
+    --color-background-subtle: 11 14 20;
+    --color-surface: 21 26 35;
+    --color-surface-raised: 27 33 44;
+
+    /* Hairline Borders */
+    --color-border: 35 42 55;
+    --color-border-strong: 48 57 73;
+
+    /* Typography */
+    --color-foreground: 233 236 242;
+    --color-foreground-secondary: 179 186 200;
+    --color-foreground-muted: 139 147 165;
+
+    /* Primary */
+    --color-primary: 241 237 228;
+    --color-primary-hover: 228 222 207;
+    --color-primary-foreground: 15 19 26;
+
+    /* Accent */
+    --color-accent: 209 169 85;
+    --color-accent-strong: 227 197 125;
+    --color-accent-soft: 209 169 85;
+    --color-accent-soft-alpha: 0.12;
+    --color-accent-border: 209 169 85;
+    --color-accent-border-alpha: 0.30;
+
+    /* Message Bubbles */
+    --color-user-bubble: 31 43 69;
+    --color-user-bubble-foreground: 233 236 242;
+
+    /* Focus, Highlight, Overlay */
+    --color-ring: 209 169 85;
+    --color-highlight: 209 169 85;
+    --color-highlight-alpha: 0.28;
+    --color-overlay: 5 8 14;
+    --color-overlay-alpha: 0.60;
+
+    /* Semantic Messaging */
+    --color-success: 91 179 138;
+    --color-warning: 224 160 74;
+    --color-danger: 232 120 108;
+    --color-info: 122 165 230;
+
+    --shadow-soft: 0 8px 24px -12px rgba(0, 0, 0, 0.60);
+  }
+}
